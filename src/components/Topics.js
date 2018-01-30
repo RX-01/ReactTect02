@@ -1,12 +1,12 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
-
+import LinksList from '../OPP/LinkData'
 
   const Topics = () => {
 
-    const Items = ['rendering','components','props-v-state']
+    // const Links = ['rendering','components','props-v-state']
     // add a guard for wrong routs 
-    const LinkItems = Items.map((item, index) =>
+    const LinkItems = LinksList.map((item, index) =>
         <li key = {index}>
                 <Link to={{
                     pathname:`/topics/${item}`,
@@ -19,10 +19,10 @@ import {Link} from 'react-router-dom'
 
     return (
     <div>
-    <h2>Topics</h2>
-    
 
+    <h2>Topics</h2>
       <ul>{LinkItems} </ul>
+
     </div>
     );
 
